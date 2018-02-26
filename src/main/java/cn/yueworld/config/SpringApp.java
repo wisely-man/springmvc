@@ -1,13 +1,9 @@
 package cn.yueworld.config;
 
 import org.springframework.core.io.Resource;
-import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
 
-import javax.servlet.ServletContext;
-import javax.swing.*;
 import java.io.IOException;
-import java.io.InputStream;
 import java.lang.annotation.Annotation;
 import java.util.Map;
 
