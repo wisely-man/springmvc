@@ -62,7 +62,7 @@ public class SpringApp {
      * @param annotationClz
      * @return
      */
-    public String[] getBeanNamesByAnnotatoinType(Class annotationClz){
+    public String[] getBeanNamesByAnnotationType(Class annotationClz){
         return this.context.getBeanNamesForAnnotation(annotationClz);
     }
 
@@ -71,7 +71,7 @@ public class SpringApp {
      * @param annotationClz
      * @return
      */
-    public <T> Map<String, T> getObjectByAnnotatoinType(Class<Annotation> annotationClz){
+    public <T> Map<String, T> getObjectByAnnotationType(Class<Annotation> annotationClz){
         return (Map<String, T>) this.context.getBeansWithAnnotation(annotationClz);
     }
 
