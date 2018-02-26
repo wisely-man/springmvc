@@ -20,6 +20,7 @@ import org.springframework.web.servlet.config.annotation.*;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
 
+import java.io.IOException;
 import java.util.List;
 
 /**
@@ -146,7 +147,11 @@ public class SpringMvcConfig extends WebMvcConfigurerAdapter{
     public SqlSessionFactoryBean sqlSessionFactoryBean(){
         SqlSessionFactoryBean factoryBean = new SqlSessionFactoryBean();
         factoryBean.setDataSource(dataSource());
-        factoryBean.setMapperLocations(new Resource[]{SpringApp.getInstance().getResource(MyConfiguration.getProperty("mapper_location"))});
+        try {
+            factoryBean.setMapperLocations(SpringApp.getInstance().getResources(MyConfiguration.getProperty("mapper_location")));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         return factoryBean;
     }
     @Bean

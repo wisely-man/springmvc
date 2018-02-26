@@ -6,6 +6,7 @@ import org.springframework.web.context.support.AnnotationConfigWebApplicationCon
 
 import javax.servlet.ServletContext;
 import javax.swing.*;
+import java.io.IOException;
 import java.io.InputStream;
 import java.lang.annotation.Annotation;
 import java.util.Map;
@@ -84,7 +85,18 @@ public class SpringApp {
         if(this.context == null){
             return null;
         }
-
         return this.context.getResource(location);
+    }
+
+    /**
+     *
+     * @param locationPattern
+     * @return
+     */
+    public Resource[] getResources(String locationPattern) throws IOException {
+        if(this.context == null){
+            return null;
+        }
+        return this.context.getResources(locationPattern);
     }
 }
