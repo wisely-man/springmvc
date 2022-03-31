@@ -10,7 +10,7 @@
 
   <properties>
     <java.version>1.7</java.version>
-    <springframework.version>4.1.5.RELEASE</springframework.version>
+    <springframework.version>5.3.18</springframework.version>
     <javaee-api.version>7.0</javaee-api.version>
     <javaservlet.version>1.2</javaservlet.version>
     <fastjson.version>2.9.10.7</fastjson.version>
