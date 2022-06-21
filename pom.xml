@@ -14,7 +14,7 @@
     <javaee-api.version>7.0</javaee-api.version>
     <javaservlet.version>1.2</javaservlet.version>
     <fastjson.version>2.9.10.7</fastjson.version>
-    <mysql.version>8.0.16</mysql.version>
+    <mysql.version>8.0.28</mysql.version>
     <mybatis.version>3.2.7</mybatis.version>
   </properties>
 
